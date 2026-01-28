@@ -1,7 +1,7 @@
 <template>
   <header class="sticky top-0 z-50 w-full bg-[#0B121E]/90 backdrop-blur-md border-b border-white/5 flex flex-col items-center shadow-2xl">
     
-    <nav class="w-full max-w-[1280px] mx-auto px-6 h-16 flex justify-between items-center">
+    <nav class="w-full max-w-[1280px] mx-auto h-16 flex justify-between items-center">
         <!-- logo -->
         <router-link to="/" class="flex items-center gap-2 group">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
@@ -22,13 +22,20 @@
         </router-link>
     </nav>
         
-    <nav class="w-full max-w-[1280px] mx-auto px-6 h-14 flex justify-between items-center border-t border-white/5">
+    <nav class="w-full max-w-[1280px] mx-auto h-14 flex justify-between items-center border-t border-white/5">
         <!-- navlinks -->
         <ul class="hidden md:flex items-center gap-8 text-[15px] font-medium">
-            <li v-for="item in ['Home', 'Travel', 'Forecast', 'Location', 'About Us']" :key="item">
-              <router-link to="/" class="relative text-[#94A3B8] hover:text-white transition-colors group">
-                  {{ item }}
-                  <span class="absolute -bottom-[18px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
+            <li>
+              <router-link to="/home" class="relative text-[#94A3B8] hover:text-white transition-colors group">
+                  Home
+                  <span class="absolute -bottom-[6px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
+              </router-link>
+            </li>
+
+            <li>
+              <router-link to="/location" class="relative text-[#94A3B8] hover:text-white transition-colors group">
+                  Location
+                  <span class="absolute -bottom-[6px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
               </router-link>
             </li>
         </ul>

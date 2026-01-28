@@ -1,2 +1,30 @@
 @import './base.css';
 @import "tailwindcss";
+
+
+/* register page */
+.input-fill {
+    margin-top: 12px;
+}
+
+.group {
+    margin-top: 6px;
+}
+
+.submit-input {
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+/* home page */
+.info-cols {
+    margin-top: 12px;
+}
+
+.forcast {
+    margin-top: 26px;
+}
+
+.feature {
+    margin-top: 24px;
+}
