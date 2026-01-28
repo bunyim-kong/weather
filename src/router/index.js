@@ -1,9 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Location from '../views/Location.vue'
-import Travel from '../views/Travel.vue'
-import Forecast from '../views/Forecast.vue'
-import About from '../views/About.vue'
+import Location from '../views/LocationView.vue'
+import Travel from '../views/TravelView.vue'
+import Forecast from '../views/ForecastView.vue'
+import About from '../views/AboutView.vue'
+import Profile from '../views/RegisterView.vue'
+import RegisterView from '../views/RegisterView.vue'
+import AboutView from '../views/AboutView.vue'
+import ForecastView from '../views/ForecastView.vue'
+import TravelView from '../views/TravelView.vue'
+import LocationView from '../views/LocationView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,22 +22,27 @@ const router = createRouter({
     {
       path: '/location',
       name: 'loaction',
-      component: Location,
+      component: LocationView,
     },
     {
       path: '/travel',
       name: 'travel',
-      component: Travel,
+      component: TravelView,
     },
     {
       path: '/forecast',
       name: 'forecast',
-      component: Forecast,
+      component: ForecastView,
     },
     {
       path: '/about',
       name: 'about',
-      component: About,
+      component: AboutView,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: RegisterView,
     },
     
 
