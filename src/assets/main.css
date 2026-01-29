@@ -1,36 +1,30 @@
 @import './base.css';
 @import "tailwindcss";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+
+/* register page */
+.input-fill {
+    margin-top: 12px;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.group {
+    margin-top: 6px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.submit-input {
+    margin-top: 24px;
+    cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+/* home page */
+.info-cols {
+    margin-top: 12px;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.forcast {
+    margin-top: 26px;
+}
+
+.feature {
+    margin-top: 24px;
 }
