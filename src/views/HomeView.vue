@@ -98,7 +98,7 @@ const forecast = [
               <h4 class="font-bold text-lg text-white">Perfect Travel Weather</h4>
               <p class="text-sm text-[#94A3B8]">Based on your interests in hiking.</p>
             </div>
-            <button class="bg-[#33BECC] text-[#0B121E] font-bold px-4 py-2 rounded-lg text-sm hover:scale-105 transition-transform">Explore</button>
+            <button class="bg-[#162135] border border-white/10 text-[#33BECC] px-4 py-2 rounded-xl hover:bg-[#33BECC] hover:text-[#0B121E] transition-all duration-300 shadow-lg">Explore</button>
           </div>
           
           <div class="bg-[#162135]/50 border border-white/5 p-6 rounded-2xl flex items-center justify-between">
