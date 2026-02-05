@@ -5,9 +5,16 @@ import AboutView from '../views/AboutView.vue'
 import ForecastView from '../views/NewsView.vue'
 import TravelView from '../views/TravelView.vue'
 import LocationView from '../views/LocationView.vue'
+import DetailNewView from '../views/detail-newView.vue'
+import detailNew1View from '../views/detail-new-1View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
+
+  path: '/news/:id',
+  name: 'news-detail',
+  component: () => import('../views/detail-newView.vue'),
   routes: [
     {
       path: '/home',
@@ -28,6 +35,16 @@ const router = createRouter({
       path: '/forecast',
       name: 'forecast',
       component: ForecastView,
+    },
+    {
+    path: '/news/:id',  // dynamic route for each news detail
+    name: 'detail-new',
+    component: DetailNewView
+    },
+    {
+    path: '/detail-new-1',
+    name: 'detail-new-1',
+    component: detailNew1View
     },
     {
       path: '/about',
