@@ -1,4 +1,5 @@
 <template>
+  
   <header class="sticky top-0 z-50 w-full bg-[#0B121E]/90 backdrop-blur-md border-b border-white/5 flex flex-col items-center shadow-2xl">
     
     <nav class="w-full max-w-[1280px] mx-auto h-16 flex justify-between items-center">
