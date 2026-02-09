@@ -1,23 +1,13 @@
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router' // 1. Import the hook
-
-const router = useRouter() // 2. Initialize the router instance
 
 const username = ref('')
 const email = ref('')
 const password = ref('')
 
 const handleRegister = () => {
-  // In a real app, you'd wait for your API response here
-  console.log('Registering:', { 
-    username: username.value, 
-    email: email.value, 
-    password: password.value 
-  })
-  
-  // 3. Navigate to the /home route
-  router.push('/home')
+  console.log('Registering:', { username: username.value, email: email.value, password: password.value })
+  alert('Account created! (In a real app, this would connect to your database)')
 }
 </script>
 
@@ -30,7 +20,7 @@ const handleRegister = () => {
         
         <div class="text-center mb-10">
           <h1 class="text-3xl font-bold text-white mb-2">Create Account</h1>
-          <p class="text-[#94A3B8]">Join our weather community today</p>
+          <p class="group text-[#94A3B8]">Join our weather community today</p>
         </div>
 
         <form @submit.prevent="handleRegister" class="space-y-6">
@@ -42,6 +32,7 @@ const handleRegister = () => {
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </span>
+
               <input 
                 v-model="username"
                 type="text" 
