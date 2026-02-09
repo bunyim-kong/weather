@@ -113,6 +113,60 @@ const forecast = [
           </div>
         </section>
 
+        <!-- Hourly Precipitation -->
+        <section class="feature bg-[#162135]/50 border border-white/5 p-8 rounded-[2rem]">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-xl font-bold text-white">Precipitation Probability</h3>
+            <div class="flex gap-2">
+              <span class="flex items-center gap-2 text-xs text-[#94A3B8]">
+                <span class="w-3 h-3 bg-[#33BECC] rounded-full"></span> Rain
+              </span>
+            </div>
+          </div>
+          
+          <div class="flex items-end justify-between h-32 gap-2">
+            <div v-for="h in [10, 20, 45, 80, 50, 30, 10]" :key="h" 
+                class="flex-1 bg-white/5 rounded-t-lg relative group transition-all hover:bg-[#33BECC]/20">
+              <div :style="{ height: h + '%' }" 
+                  class="absolute bottom-0 w-full bg-[#33BECC]/40 rounded-t-lg group-hover:bg-[#33BECC] transition-all">
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between mt-4 text-[#94A3B8] text-xs font-medium px-1">
+            <span>12 PM</span><span>2 PM</span><span>4 PM</span><span>6 PM</span><span>8 PM</span><span>10 PM</span><span>12 AM</span>
+          </div>
+        </section>
+
+        <section class="feature grid md:grid-cols-3 gap-6">
+          <div class="bg-[#162135]/50 border border-white/5 p-6 rounded-2xl md:col-span-2">
+            <h4 class="text-[#94A3B8] text-sm font-medium mb-4">Daylight Overview</h4>
+            <div class="flex justify-between items-center">
+              <div class="space-y-1">
+                <p class="text-xs text-[#94A3B8] uppercase">Sunrise</p>
+                <p class="text-xl font-bold">06:42 AM</p>
+              </div>
+              <div class="relative w-32 h-16 border-b border-white/20 overflow-hidden">
+                <div class="absolute inset-0 border-[3px] border-dashed border-[#33BECC]/30 rounded-full"></div>
+                <div class="absolute left-1/4 top-1/4 w-3 h-3 bg-yellow-400 rounded-full shadow-[0_0_10px_#facc15]"></div>
+              </div>
+              <div class="space-y-1 text-right">
+                <p class="text-xs text-[#94A3B8] uppercase">Sunset</p>
+                <p class="text-xl font-bold">05:18 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#162135]/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
+            <h4 class="text-[#94A3B8] text-sm font-medium">UV Index</h4>
+            <div>
+              <p class="text-3xl font-bold">4 <span class="text-sm font-normal text-yellow-400 ml-1">Moderate</span></p>
+              <div class="w-full bg-white/10 h-1.5 rounded-full mt-3 overflow-hidden">
+                <div class="bg-gradient-to-r from-green-400 to-yellow-400 h-full" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </main>
   </section>

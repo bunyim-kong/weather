@@ -3,7 +3,7 @@
     
     <nav class="w-full max-w-[1280px] mx-auto h-16 flex justify-between items-center">
         <!-- logo -->
-        <router-link to="/" class="flex items-center gap-2 group">
+        <router-link to="/home" class="flex items-center gap-2 group">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
                 class="w-9 h-9 fill-[#33BECC] group-hover:drop-shadow-[0_0_8px_#33BECC] transition-all duration-300">
 
