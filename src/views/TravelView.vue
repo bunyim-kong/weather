@@ -104,9 +104,9 @@ const featured = {
       </div>
 
       <section class="w-full flex justify-center items-start bg-[#0B121E]">
-        <main class="w-full max-w-[1280px] py-12 px-6 flex flex-col items-center">
+        <main class="w-full max-w-[1280px] flex flex-col items-center">
 
-          <div class="relative w-full h-[550px] rounded-[3.5rem] overflow-hidden group cursor-pointer shadow-2xl border border-white/10">
+          <div class="relative w-full h-[500px] rounded-[3.5rem] overflow-hidden group cursor-pointer shadow-2xl border border-white/10">
             
             <img :src="featured.image" 
                 :alt="featured.name"
@@ -139,9 +139,6 @@ const featured = {
           </div>
 
         </main>
-
-          
-
       </section>
 
 
@@ -173,38 +170,7 @@ const featured = {
         </div>
       </div>
 
-       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div v-for="country in countries" :key="country.name" 
-             class="relative w-full h-[450px] rounded-[3rem] overflow-hidden group cursor-pointer shadow-2xl border border-white/5">
-          
-          <img :src="country.image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-          <div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
-            <div class="max-w-[70%]">
-              <div :class="['inline-block border-l-4 pl-4 mb-3', country.accent]">
-                <p class="text-[9px] font-black uppercase tracking-[0.3em] text-white/60">Exploring</p>
-                <h2 class="text-3xl font-bold text-white tracking-tight">{{ country.name }}</h2>
-              </div>
-              <p class="text-slate-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {{ country.description }}
-              </p>
-            </div>
-            <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-xl font-bold uppercase text-[9px] tracking-widest hover:bg-white hover:text-black transition-all">
-              View Gallery
-            </button>
-          </div>
-          
-          <div class="absolute top-6 left-6">
-            <span class="bg-black/40 backdrop-blur-md text-white text-[8px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
-              {{ country.region }}
-            </span>
-          </div>
-        </div>
-      </div>
-      
-
-    
+  
 
     </main>
   </section>
