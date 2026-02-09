@@ -45,7 +45,7 @@ const featured = {
 
 <template>
   <section class="w-full flex justify-center items-start bg-[#0B121E]">
-    <main class="w-full max-w-[1280px] min-h-screen text-white py-12 px-6 flex flex-col gap-16">
+    <main class="w-full max-w-[1280px] min-h-screen text-white py-12 flex flex-col gap-16">
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="place in destinations" :key="place.city" 

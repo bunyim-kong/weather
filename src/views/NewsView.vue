@@ -106,10 +106,10 @@ const newsList = [
       v-if="show"
       v-for="news in newsList"
       :key="news.id"
-      class="flex items-center justify-center py-4"
+      class="flex items-center justify-center py-4 bg-[#0B121E]"
     >
       <div
-        class="max-w-7xl w-full bg-black
+        class="max-w-7xl w-full 
                transition-all duration-300
                hover:-translate-y-1 hover:shadow-xl"
       >
