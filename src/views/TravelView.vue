@@ -170,7 +170,7 @@ const featured = {
         </div>
       </div>
 
-  
+      
 
     </main>
   </section>
