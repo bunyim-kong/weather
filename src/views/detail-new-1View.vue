@@ -1,18 +1,32 @@
 <script setup>
-import { useRouter } from 'vue-router';
-import newImg1 from '@/assets/image/img-new2.jpg'
-import imgDetailNews1 from '@/assets/image/img-detailnews-3.jpg'
-import imgDetailNews2 from '@/assets/image/img-detailnews-4.jpg'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+// Images
+import newImg2 from '@/assets/image/img-new2.jpg'
+import imgDetailNews3 from '@/assets/image/img-detailnews-3.jpg'
+import imgDetailNews4 from '@/assets/image/img-detailnews-4.jpg'
+
+// Font Awesome
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-const router = useRouter();
+const router = useRouter()
+
+// Control transition animation
+const show = ref(false)
+
+onMounted(() => {
+  show.value = true
+})
 
 const goBack = () => {
-  router.back(); // Or router.go(-1)
-};
+  router.back()
+}
 </script>
+
 <template>
-  <div class="p-1 pl-29">
+  <!-- Back button -->
+  <div class="p-1 pl-6">
     <router-link
       to="/forecast"
       class="inline-flex items-center gap-2
@@ -22,82 +36,86 @@ const goBack = () => {
              transition-all duration-300 shadow-lg"
     >
       <i class="fa-solid fa-arrow-left"></i>
-      <span>Back to New</span>
+      <span>Back to News</span>
     </router-link>
   </div>
 
-
-
-<!-- Animated content -->
+  <!-- Animated content -->
   <Transition name="fade-slide">
     <div
       v-if="show"
-      class="pl-26 pr-25 bg-black w-full"
+      class="bg-black w-full px-6 md:px-20 pb-10"
     >
-      <h2 class="text-[25px] font-extrabold text-white pl-2 pt-4 pb-3 hover:underline cursor-pointer">
+      <h2 class="text-[25px] font-extrabold text-white pt-4 pb-3 hover:underline cursor-pointer">
         The Role of High-Pressure Blocking in Prolonged Winter Weather
       </h2>
 
-      <p class="pl-5 text-white text-[15px]">
-        Posted on 24/01/2026 by Oleksandra (meteoblue) (Comments: 1).
+      <p class="text-white text-[15px] opacity-80">
+        Posted on 24/01/2026 by Oleksandra (meteoblue) (Comments: 1)
       </p>
 
-      <p class="pl-5 pt-2 text-white text-[17px] font-google-sans">
-        Winter weather in the mid-latitudes is usually dynamic. Low-pressure systems move from west to east, bringing alternating periods of mild, wet weather and colder, clearer conditions. This constant progression is driven by the jet stream, which acts as a fast-moving conveyor belt for weather systems. However, some winters depart sharply from this familiar pattern. Instead of frequent changes, cold, dry or snowy conditions can persist for weeks. One of the key drivers behind such prolonged winter spells is high-pressure blocking.
+      <p class="text-white text-[17px] pt-4 leading-relaxed">
+        Winter weather in the mid-latitudes is usually dynamic. Low-pressure systems move
+        from west to east, bringing alternating periods of mild, wet weather and colder,
+        clearer conditions. This constant progression is driven by the jet stream, which
+        acts as a fast-moving conveyor belt for weather systems.
       </p>
 
       <img
         :src="newImg2"
-        class="w-[500px] pt-4 pl-5 transition-transform duration-300 hover:scale-105"
+        class="w-full max-w-[500px] pt-6 transition-transform duration-300 hover:scale-105"
         alt="news image"
       />
 
-      <p class="pl-5 text-white text-[17px] pt-4 pb-4 pr-20">
+      <p class="text-white text-[17px] pt-6 leading-relaxed">
         The
-        <RouterLink class="text-blue-400 underline" to="/forecast">
+        <router-link class="text-blue-400 underline" to="/forecast">
           AMS Annual Meeting
-        </RouterLink>
-        Winter weather in the mid-latitudes is usually dynamic. Low-pressure systems move from west to east, bringing alternating periods of mild, wet weather and colder, clearer conditions. This constant progression is driven by the jet stream, which acts as a fast-moving conveyor belt for weather systems. However, some winters depart sharply from this familiar pattern. Instead of frequent changes, cold, dry or snowy conditions can persist for weeks. One of the key drivers behind such prolonged winter spells is high-pressure blocking.
-
-
+        </router-link>
+        highlights how high-pressure blocking can disrupt the normal west-to-east flow,
+        allowing cold conditions to persist for weeks.
       </p>
 
-      <h2 class="text-[25px] font-extrabold text-white pl-4 pt-4 pb-3 hover:underline cursor-pointer">
+      <h2 class="text-[25px] font-extrabold text-white pt-10 pb-3 hover:underline cursor-pointer">
         A long-standing tradition of exchange
       </h2>
 
-      <p class="pl-5 text-white text-[17px] pr-20 pb-5">
-        Blocking highs also influence the direction of air flow. On their eastern flank, they often draw cold air southwards from polar or Arctic regions. In Europe, this can mean bitter easterly or northeasterly winds, transporting very cold continental air from Russia or Scandinavia towards western and central parts of the continent. Similar processes affect North America, where blocking patterns can allow Arctic air to plunge deep into the United States. These cold air outbreaks are rarely brief when a blocking high is present, as the atmospheric circulation that would normally replace the cold air is effectively shut down.
+      <p class="text-white text-[17px] leading-relaxed">
+        Blocking highs influence the direction of air flow. On their eastern flank,
+        they often draw cold air southwards from polar or Arctic regions, resulting in
+        prolonged cold outbreaks.
       </p>
 
-      <h2 class="text-[25px] font-extrabold text-white pl-4 pt-4 pb-3 hover:underline cursor-pointer">
+      <h2 class="text-[25px] font-extrabold text-white pt-10 pb-3 hover:underline cursor-pointer">
         Scientific contribution: Wind power forecasting
       </h2>
 
-      <p class="pl-5 text-white text-[17px] pr-20">
-        Not all winter blocking brings clear skies. In many cases, especially across central and eastern Europe, cold air becomes trapped near the surface beneath the high-pressure system. This can lead to persistent low cloud, fog or freezing fog, sometimes lasting for days. These so-called temperature inversions prevent daytime warming and can keep temperatures well below seasonal averages even during daylight hours. Such conditions are also associated with poor air quality, as pollutants accumulate near the surface in the absence of wind and vertical mixing.
+      <p class="text-white text-[17px] leading-relaxed">
+        In many cases, cold air becomes trapped near the surface beneath the high-pressure
+        system. This leads to persistent low cloud, fog, or freezing fog and often
+        deteriorates air quality.
       </p>
 
       <img
         :src="imgDetailNews3"
-        class="w-[900px] pt-4 pl-5 transition-transform duration-300 hover:scale-105"
+        class="w-full max-w-[900px] pt-6 transition-transform duration-300 hover:scale-105"
         alt="detail image"
       />
 
-      <p class="pl-5 text-white text-[17px] pr-20 pt-4">
-        Blocking highs influence air flow, drawing cold Arctic air into Europe and North
-        America, leading to prolonged cold outbreaks. High-pressure blocking can persist for remarkably long periods. While a typical weather system moves through in a few days, blocking patterns can remain in place for several weeks. Certain configurations, such as Omega blocks, where a high-pressure system is sandwiched between two low-pressure systems, are particularly resistant to change. In winter, these patterns can lock in cold conditions and delay the arrival of milder maritime air. Historic European winters, such as 1962–63 or 2009–10, were strongly influenced by prolonged blocking, leading to widespread disruption, heavy snowfall in some regions, and sustained sub-zero temperatures.
+      <p class="text-white text-[17px] pt-6 leading-relaxed">
+        High-pressure blocking can persist for weeks. Certain configurations such as
+        Omega blocks are especially resistant to change, locking in winter conditions.
       </p>
 
       <img
         :src="imgDetailNews4"
-        class="w-[900px] pt-6 pl-5 transition-transform duration-300 hover:scale-105"
+        class="w-full max-w-[900px] pt-8 transition-transform duration-300 hover:scale-105"
         alt="detail image"
       />
-        
-      <p class="pl-5 text-white text-[17px] pr-20 pt-20 pb-6">
-        High-pressure blocking acts as the atmosphere’s pause button, locking winter
-        conditions in place for weeks. In essence, high-pressure blocking acts as the atmosphere's pause button in winter. By disrupting the usual west-to-east flow, it allows cold air to settle in, temperatures to drop well below normal, and winter impacts to build over time rather than pass quickly. For those following how the atmosphere "locks in" these conditions, meteoblue Sea Level Pressure and upper-air maps offer direct insight into the large-scale dynamics behind prolonged winter weather across Europe and beyond.
+
+      <p class="text-white text-[17px] pt-10 leading-relaxed">
+        High-pressure blocking acts as the atmosphere’s pause button, delaying the return
+        of milder air and allowing winter impacts to build over time.
       </p>
     </div>
   </Transition>

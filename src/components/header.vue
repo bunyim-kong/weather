@@ -33,13 +33,6 @@
             </li>
 
             <li>
-              <router-link to="/location" class="relative text-[#94A3B8] hover:text-white transition-colors group">
-                  Location
-                  <span class="absolute -bottom-[6px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
-              </router-link>
-            </li>
-
-            <li>
               <router-link to="/travel" class="relative text-[#94A3B8] hover:text-white transition-colors group">
                   Travel
                   <span class="absolute -bottom-[6px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
@@ -48,7 +41,7 @@
 
             <li>
               <router-link to="/forecast" class="relative text-[#94A3B8] hover:text-white transition-colors group">
-                  Forecast
+                  News
                   <span class="absolute -bottom-[6px] left-0 w-0 h-[2px] bg-[#33BECC] transition-all duration-300 group-hover:w-full"></span>
               </router-link>
             </li>

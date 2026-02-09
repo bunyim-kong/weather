@@ -4,7 +4,6 @@ import RegisterView from '../views/RegisterView.vue'
 import AboutView from '../views/AboutView.vue'
 import ForecastView from '../views/NewsView.vue'
 import TravelView from '../views/TravelView.vue'
-import LocationView from '../views/LocationView.vue'
 import DetailNewView from '../views/detail-newView.vue'
 import detailNew1View from '../views/detail-new-1View.vue'
 
@@ -20,11 +19,6 @@ const router = createRouter({
       path: '/home',
       name: 'home',
       component: HomeView,
-    },
-    {
-      path: '/location',
-      name: 'loaction',
-      component: LocationView,
     },
     {
       path: '/travel',
